@@ -1,0 +1,16 @@
+%h1 Nuevo Telefono
+%p Agregar un nuevo telefono
+= form_for([@client, @phone_number]) do |f|
+	.field
+		= f.label :number
+		= f.number_field :number
+	.field
+		= f.label :cellphone
+		= f.text_field :cellphone
+
+	.field{ style: @client.phone_numbers.count == 0 ? "display: none;" : "" }
+		= f.check_box :primary
+		= f.label :primary
+
+	.field
+		= f.submit

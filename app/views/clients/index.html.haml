@@ -1,0 +1,10 @@
+%h1 Clientes
+%p Listado de clientes
+#mi_tabla
+  %table{border:"1"}
+    %tr
+      %th ID
+      %th Nombre
+      %th Numero Primario
+    = render @clients
+= link_to "Nuevo Cliente", new_client_path

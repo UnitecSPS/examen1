@@ -1,0 +1,12 @@
+%h1 Crear Cliente
+%p Crea un nuevo cliente
+= form_for @client do |f|
+	.field
+		= f.label :name
+		=	f.text_field :name
+	.field
+		= f.label :email
+		= f.email_field :email
+	.field
+		= f.submit
+	

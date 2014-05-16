@@ -1,0 +1,10 @@
+%table
+	%tr
+		%th Numero
+		%th Celular
+		%th Primary
+	- numbers.each do |phone_number|
+		%tr
+			%td= phone_number.number
+			%td= phone_number.cellphone
+			%td= phone_number.primary

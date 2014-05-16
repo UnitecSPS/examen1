@@ -1,0 +1,9 @@
+%h1= @client.name
+%p
+	%strong Email
+	= @client.email
+%h3 Listado de Telefonos
+= render partial: "phone_numbers/table", locals: { numbers: @client.phone_numbers }
+%ul
+	%li= link_to "Editar", edit_client_path(@client)
+	%li= link_to "Agregar Numero", new_client_phone_number_path(@client)
