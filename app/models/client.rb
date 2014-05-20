@@ -3,6 +3,6 @@ class Client < ActiveRecord::Base
 
 	def primary_number
 		number = phone_numbers.primary.first
-		number.present? ? number : "Sin Numero"
+		number.present? ? number.number : "Sin Numero"
 	end
 end
